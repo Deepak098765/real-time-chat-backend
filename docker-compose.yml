@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  boot-app:
+    image: sdeepak740/chatback
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - FRONTEND_BASE_URL=${FRONTEND_BASE_URL}
+
+
+
+
+
+

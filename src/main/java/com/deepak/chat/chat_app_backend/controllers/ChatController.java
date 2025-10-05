@@ -10,11 +10,12 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
-
+import com.deepak.chat.chat_app_backend.config.AppConstants;
+import com.deepak.chat.chat_app_backend.config.WebConfig;
 import java.time.LocalDateTime;
 
 @Controller
-@CrossOrigin("http://localhost:5173")
+
 public class ChatController {
 
     private RoomRepository roomRepository;

@@ -7,12 +7,14 @@ import com.deepak.chat.chat_app_backend.repositories.RoomRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import com.deepak.chat.chat_app_backend.config.AppConstants;
 import java.util.List;
+import com.deepak.chat.chat_app_backend.config.WebConfig;
+
 
 @RestController
 @RequestMapping("/api/v1/rooms")
-@CrossOrigin("http://localhost:5173")
+
 public class RoomController {
 
     private RoomRepository roomRepository;
