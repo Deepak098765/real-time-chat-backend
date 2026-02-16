@@ -1,5 +1,6 @@
 # Use a stable JDK base image
-FROM openjdk:21-jdk-slim
+#FROM openjdk:21-jdk-slim
+FROM eclipse-temurin:21-jdk-jammy
 
 # Set working directory inside the container
 WORKDIR /app
@@ -12,7 +13,7 @@ EXPOSE 8080
 
 # Set environment variable for MongoDB URI
 # This will be overridden by Docker run or cloud platform environment variables
-ENV MONGO_URI=${MONGO_URI}
-ENV FRONTEND_BASE_URL=${FRONTEND_BASE_URL}
+#ENV MONGO_URI=${MONGO_URI}
+#ENV FRONTEND_BASE_URL=${FRONTEND_BASE_URL}
 # Run the Spring Boot application
 ENTRYPOINT ["java", "-jar", "app.jar"]
